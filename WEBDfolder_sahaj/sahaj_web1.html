@@ -13,40 +13,59 @@
     <p>
       <a href="#x">Jump to end</a>
     </p>
-    <h1 style="color:Red;text-align:center;">Machine Learning</h1>
-    <img src = "machine_learning_img.jpeg" alt="Machine Learning logo" class="center responsive">
-    <p title="Few words for machine learning">Machine l3aring</p>
-    <p >
-      Machine learning is an application of artificial intelligence (AI) that provides systems the ability to automatically learn and improve from experience without being explicitly programmed.
-      <br>
-    </p>
-    <hr>
-    <p> 
-      you can google it 
-      <a href="https://en.wikipedia.org/wiki/Machine_learning" target="_blank">
-       Visit Machine Learning wiki 
-     </a>
+
+    <header>
+      <h1 style="color:#f0f5d3; text-align:center;">
+        Machine Learning
+      </h1>
+    </header>
+
+    <section>
+      <nav>
+        <li><a href="a1#">Machine Learning</li>
+        <li><a href="a2#">Thomas Shelby</li>
+        <li><a href="e#">end</li>
+      </nav>
+
+      <article>
+        <img src = "machine_learning_img.jpeg" alt="Machine Learning logo" class="center responsive">
+        <p title="Few words for machine learning">
+          Machine learning
+        </p>
+        <p >
+          Machine learning is an application of artificial intelligence (AI) that provides systems the ability to automatically learn and improve from experience without being explicitly programmed.
+          <br>
+        </p>
+        <hr>
+        <p>
+          you can google it 
+        <a href="https://en.wikipedia.org/wiki/Machine_learning" target="_blank">
+          Visit Machine Learning wiki 
+        </a>
+      </article>
+    </section>
   </body>
+<header>
   <!-- Slideshow container -->
   <div class="slideshow-container">
 
     <!-- Full-width images with number and caption text -->
     <div class="mySlides fade">
       <div class="numbertext">1 / 3</div>
-      <img src="simage1.jpeg" style="width: auto;" class="center">
-      <div class="text">Caption Text</div>
+      <img src="imageSet1.jpg" class="center fix1">
+      <div class="text">image1</div>
     </div>
 
     <div class="mySlides fade">
       <div class="numbertext">2 / 3</div>
-      <img src="simage2.jpeg" style="width: auto;" class="center">
-      <div class="text">Caption Two</div>
+      <img src="imageSet2.webp" class="center fix1">
+      <div class="text">image2</div>
     </div>
 
     <div class="mySlides fade">
       <div class="numbertext">3 / 3</div>
-      <img src="simage3.jpeg" style="width:auto;" class="center">
-      <div class="text">Caption Three</div>
+      <img src="imageSet3.jpg" class="center fix1">
+      <div class="text">image3</div>
     </div>
 
     <!-- Next and previous buttons -->
@@ -62,37 +81,65 @@
     <span class="dot" onclick="currentSlide(3)"></span>
   </div>
   <script type="text/javascript">
-      var slideIndex = 0;
-  showSlides();
+      var slideIndex = 1;
+      showSlides(slideIndex);
 
-  function showSlides() {
-    var i;
-    var slides = document.getElementsByClassName("mySlides");
-    for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
-    }
-    slideIndex++;
-    if (slideIndex > slides.length) {slideIndex = 1}
-    slides[slideIndex-1].style.display = "block";
-    setTimeout(showSlides, 2000); // Change image every 2 seconds
-  }
+      // Next/previous controls
+      function plusSlides(n) {
+        showSlides(slideIndex += n);
+      }
+
+      // Thumbnail image controls
+      function currentSlide(n) {
+        showSlides(slideIndex = n);
+      }
+
+      function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";
+        dots[slideIndex-1].className += " active";
+      } 
   </script>
+</header>
   <p>
     Send mail to me at: 
   </p>
   <a href="mailto:sahajsingh0022@gmail.com">
     Send email
-  </a> 
+  </a>
+
+  <header>
+    <div class="row">
+      <div class="column">
+        <img src="imageT1.jpg" alt = "Thomas Shelby" class="center responsive hfix" usemap="#map2"> 
+      </div>
+      <div class="column">
+        <img src="imageT2.jpg" alt = "Thomas Shelby" class="center responsive hfix" usemap="#map2"> 
+      </div>
+      <div class="column">
+        <img src="imageT3.jpg" alt = "Thomas Shelby" class="center responsive hfix" usemap="#map2"> 
+      </div>
+    </div>
+  </header>
+  
   <br>
-  <img src="pic1.jpg" alt = "outdoor pic" class="center responsive"> 
-  <br>
-  <img src="pic2.jpg" alt = "Thomas Shelby" usemap="#map2" class="center responsive">
+  
   <button type="button" onclick="document.getElementById('demo').innerHTML = 'Thomas Shelby'">
     Click me to display Name.
   </button>
   <p id="demo"></p>
   <map name="map2">
-      <area shape="rect" coords="0,0,300,800" href="Thomas.htm">
+      <area shape="default" href="Thomas.html">
   </map>
   <p id="x">
     Machine learning is an application of artificial intelligence (AI) that provides systems the ability to automatically learn and improve from experience without being explicitly programmed.<br>Machine learning focuses on the development of computer programs that can access data and use it learn for themselves.
