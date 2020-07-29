@@ -36,6 +36,9 @@ nav {
   background: #4b5bab;
   padding: 20px;
 }
+h1{
+	font-size: 4vw;
+}
 p{ 
 	color: blue;
 }
@@ -58,7 +61,7 @@ table,th{
   width: 50%;
 }
 .responsive {
-  width: auto;
+  max-width: 100%;
   height: auto;
 }
 * {box-sizing:border-box}
@@ -91,20 +94,19 @@ table,th{
   user-select: none;
 }
 .hfix{
-	height: 300px;
-	width: auto;
+	max-height: 300px;
 }
 .fix1{
-	width: 500px;
-	height: 300px;
+	max-width: 500px;
+	max-height: 300px;
 }
 .fix2{
-	width: 300px;
-	height: 300px;
+	max-width: 300px;
+	max-height: 300px;
 }
 .fix3{
-	width: 400px;
-	height: 300px;
+	max-width: 400px;
+	max-height: 300px;
 }
 /* Position the "next button" to the right */
 .next {
